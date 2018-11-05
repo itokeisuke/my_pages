@@ -23,8 +23,8 @@ var src = {
  * 出力するディレクトリを指定します。
  */
 var dest = {
-  'root': 'dest/',
-  'html': 'dest/'
+  'root': 'docs/',
+  'html': 'docs/'
 };
 
 /**
