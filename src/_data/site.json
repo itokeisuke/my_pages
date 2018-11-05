@@ -1,7 +1,7 @@
 {
-  "name": "サイトの名前",
+  "name": "My Pages",
   "description": "サイトの概要",
-  "keywords": "サイトのキーワード1, サイトのキーワード2",
-  "rootUrl": "http://example.com/",
-  "ogpImage": "http://example.com/images/og-image.jpg"
+  "keywords": "keyword,keyword1",
+  "rootUrl": "https://itokeisuke.github.io/my_pages/",
+  "ogpImage": "https://itokeisuke.github.io/my_pages/assets/images/og-image.jpg"
 }
