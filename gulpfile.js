@@ -1,10 +1,13 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
+var sass = require('gulp-sass');
 var fs = require('fs');
 var data = require('gulp-data');
 var path = require('path');
 var plumber = require('gulp-plumber');
 var notify = require("gulp-notify");
+var autoprefixer = require( 'gulp-autoprefixer' );
+var rename = require( 'gulp-rename' );
 var browserSync = require('browser-sync');
 
 /**
@@ -15,7 +18,7 @@ var src = {
   'html': ['src/**/*.pug', '!' + 'src/**/_*.pug'],
   // JSONファイルのディレクトリを変数化。
   'json': 'src/_data/',
-  'css': 'src/**/*.css',
+  'sass': 'src/**/*.scss',
   'js': 'src/**/*.js',
 };
 
@@ -24,7 +27,7 @@ var src = {
  */
 var dest = {
   'root': 'docs/',
-  'html': 'docs/'
+  'sass': '/../css',
 };
 
 /**
@@ -53,26 +56,22 @@ gulp.task('html', function() {
     // Pugファイルの整形。
     pretty: true
   }))
-  .pipe(gulp.dest(dest.html))
-  .pipe(browserSync.reload({stream: true}));
-});
-
-/**
- * cssファイルをdestディレクトリに出力（コピー）します。
- */
-gulp.task('css', function() {
-  return gulp.src(src.css, {base: src.root})
   .pipe(gulp.dest(dest.root))
   .pipe(browserSync.reload({stream: true}));
 });
 
 /**
- * jsファイルをdestディレクトリに出力（コピー）します。
+ * scssファイルをdestディレクトリに出力します。
  */
-gulp.task('js', function() {
-  return gulp.src(src.js, {base: src.root})
-  .pipe(gulp.dest(dest.root))
-  .pipe(browserSync.reload({stream: true}));
+gulp.task('sass', function() { // build:scss というタスクを登録
+  gulp.src(src.sass, {base: src.root}) // コンパイルする scss の場所
+	.pipe(autoprefixer())
+  .pipe(sass()) // gulp-sass で変換
+  .pipe(rename(function(path) {
+          path.dirname += dest.sass;
+  }))
+  .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")})) // コンパイルエラーを通知します。
+  .pipe(gulp.dest(dest.root)); // コンパイルした scss を指定場所に出力
 });
 
 /**
@@ -88,12 +87,11 @@ gulp.task('browser-sync', function() {
 });
 
 /**
- * PugのコンパイルやCSSとjsの出力、browser-syncのリアルタイムプレビューを実行します。
+ * PugのコンパイルやSCSSとjsの出力、browser-syncのリアルタイムプレビューを実行します。
  */
-gulp.task('watch', ['html', 'css', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['html', 'sass', 'browser-sync'], function() {
   gulp.watch(src.html, ['html']);
-  gulp.watch(src.css, ['css']);
-  gulp.watch(src.js, ['js']);
+  gulp.watch(src.sass, ['sass']);
 });
 
 /**
