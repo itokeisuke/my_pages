@@ -1,5 +1,19 @@
-body {
-  color: red; }
+/* reset */
+/* Reset Style */
+html {
+  overflow-y: scroll; }
 
-.contents {
-  color: #0000FF; }
+body {
+  margin: 0 auto; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+div, p, ul, ol, li, dl, dt, dd, form, input, img {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+img,
+fieldset {
+  border: 0; }
