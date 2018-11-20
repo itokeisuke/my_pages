@@ -1,3 +1,6 @@
+/* ------------------------------------------------
+import
+------------------------------------------------ */
 /* reset */
 /* Reset Style */
 html {
@@ -17,3 +20,28 @@ div, p, ul, ol, li, dl, dt, dd, form, input, img {
 img,
 fieldset {
   border: 0; }
+
+/* ------------------------------------------------
+index
+------------------------------------------------ */
+body {
+  background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
+  background-size: 600% 600%;
+  -webkit-animation: bodyBGgradation 10s ease infinite;
+  animation: bodyBGgradation 10s ease infinite; }
+
+@-webkit-keyframes bodyBGgradation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes bodyBGgradation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }

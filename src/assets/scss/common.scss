@@ -1,4 +1,18 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-/* reset */
-@import "_reset";
+@import '_basic';
+
+/* ------------------------------------------------
+index
+------------------------------------------------ */
+body{
+  background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
+  background-size: 600% 600%;
+  animation: bodyBGgradation 10s ease infinite;
+}
+ 
+@keyframes bodyBGgradation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
