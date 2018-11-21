@@ -23,22 +23,25 @@ index
   100%{background-position:0% 50%}
 }
 
-.title {
-  @include sizeRatio(100%, 600px, 600px);
+.title_wrap {
   max-width: 600px;
-  position: relative;
-  margin: auto;
-  img {
-    position: absolute; top: 0; left: 0;
-    -webkit-animation: bounce 3s ease infinite;
-    animation: bounce 3s ease infinite;
+  .title {
+    @include sizeRatio(100%, 600px, 600px);
+    position: relative;
+    margin: auto;
+    img {
+      position: absolute; top: 0; left: 0;
+      -webkit-animation: bounce 3s ease infinite;
+      animation: bounce 3s ease infinite;
+    }
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.7) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: scale(0.7) }
+    50% { transform: scale(1.0) }
   }
 }
-@-webkit-keyframes bounce {
-  0%, 100% { -webkit-transform: scale(0.7) }
-  50% { -webkit-transform: scale(1.0) }
-}
-@keyframes bounce {
-  0%, 100% { transform: scale(0.7) }
-  50% { transform: scale(1.0) }
-}
+
