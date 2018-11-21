@@ -60,11 +60,10 @@ index
 .title {
   width: 100%;
   height: 100%;
-  padding-top: calc($height / $width * 100);
+  padding-top: 100;
   max-width: 600px;
   position: relative;
-  margin: auto;
-  padding: 100% 0 0; }
+  margin: auto; }
   .title img {
     position: absolute;
     top: 0;
