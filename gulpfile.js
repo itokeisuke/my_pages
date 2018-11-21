@@ -66,7 +66,7 @@ gulp.task('html', function() {
 gulp.task('sass', function() { // build:scss というタスクを登録
   gulp.src(src.sass, {base: src.root}) // コンパイルする scss の場所
   .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")})) // コンパイルエラーを通知します。
-	.pipe(autoprefixer())
+  .pipe(autoprefixer())
   .pipe(sass()) // gulp-sass で変換
   .pipe(rename(function(path) {
           path.dirname += dest.sass;

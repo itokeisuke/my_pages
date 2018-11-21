@@ -5,14 +5,39 @@
 /* ------------------------------------------------
 index
 ------------------------------------------------ */
-body{
+.page_home{
   background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
   background-size: 600% 600%;
+  -webkit-animation: bodyBGgradation 10s ease infinite;
   animation: bodyBGgradation 10s ease infinite;
+  text-align: center;
 }
- 
+@-webkit-keyframes rotabodyBGgradationteplane {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 @keyframes bodyBGgradation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.title {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  img {
+    position: absolute; top: 0; left: 0;
+    -webkit-animation: bounce 10s ease infinite;
+    animation: bounce 10s ease infinite;
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.7) }
+  50% { -webkit-transform: scale(1.0) }
+}
+@keyframes bounce {
+  0%, 100% { transform: scale(0.7) }
+  50% { transform: scale(1.0) }
 }
