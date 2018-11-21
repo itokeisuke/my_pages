@@ -24,7 +24,7 @@ index
 }
 
 .title {
-  @include sizeRatio($width: 600px, $height: 600px);
+  @include sizeRatio(100%, 600px, 600px);
   max-width: 600px;
   position: relative;
   margin: auto;
