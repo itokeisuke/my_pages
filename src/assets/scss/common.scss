@@ -5,14 +5,14 @@
 /* ------------------------------------------------
 index
 ------------------------------------------------ */
-.page_home{
+.page_home {
   background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
   background-size: 600% 600%;
   -webkit-animation: bodyBGgradation 10s ease infinite;
   animation: bodyBGgradation 10s ease infinite;
   text-align: center;
 }
-@-webkit-keyframes rotabodyBGgradationteplane {
+@-webkit-keyframes bodyBGgradation {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
@@ -29,8 +29,8 @@ index
   margin: auto;
   img {
     position: absolute; top: 0; left: 0;
-    -webkit-animation: bounce 10s ease infinite;
-    animation: bounce 10s ease infinite;
+    -webkit-animation: bounce 3s ease infinite;
+    animation: bounce 3s ease infinite;
   }
 }
 @-webkit-keyframes bounce {
