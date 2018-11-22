@@ -25,10 +25,10 @@ index
 
 .title_wrap {
   max-width: 600px;
+  margin: auto;
   .title {
     @include sizeRatio(100%, 600px, 600px);
     position: relative;
-    margin: auto;
     img {
       position: absolute; top: 0; left: 0;
       -webkit-animation: bounce 3s ease infinite;
@@ -44,4 +44,3 @@ index
     50% { transform: scale(1.0) }
   }
 }
-
