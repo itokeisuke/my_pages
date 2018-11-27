@@ -80,8 +80,6 @@ $.fn.sparkleh = function( options ) {
 }
 
 
-
-
 function Sparkle( $parent, options ) {
   this.options = options;
   this.init( $parent );
