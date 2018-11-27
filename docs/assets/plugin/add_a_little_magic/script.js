@@ -1,8 +1,6 @@
 
-
 $(function() {
 
-  
   // default is varying levels of transparent white sparkles
   $(".sparkley:first").sparkleh();
   
@@ -29,7 +27,6 @@ $(function() {
   });
   */
   
-  
   // an array can be passed, too for colours
   // for an image, the image needs to be fully loaded to set
   // the canvas to it's height/width.
@@ -44,13 +41,7 @@ $(function() {
   });
   */
 
-
 });
-
-
-
-
-
 
 
 $.fn.sparkleh = function( options ) {
@@ -70,6 +61,10 @@ $.fn.sparkleh = function( options ) {
     
     var sparkle = new Sparkle( $this, settings );
     
+    $(function(){
+      sparkle.over();
+    });
+    /*
     $this.on({
       "mouseover focus" : function(e) {
         sparkle.over();
@@ -78,6 +73,7 @@ $.fn.sparkleh = function( options ) {
         sparkle.out();
       }
     });
+    */
     
   });
   
