@@ -1,7 +1,0 @@
-{
-  "name": "My Pages",
-  "description": "My Pageです。GitとPugとScss、その他。",
-  "keywords": "keyword,keyword1",
-  "rootUrl": "https://itokeisuke.github.io/my_pages",
-  "ogpImage": "https://itokeisuke.github.io/my_pages/assets/images/og-image.jpg"
-}

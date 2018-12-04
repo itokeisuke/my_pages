@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-/* size ratio */
-@mixin sizeRatio($wrapWidth, $width, $height) {
-  width: $wrapWidth;
-  height: 0;
-  padding-top: ($height / $width) * 100 * 1%;
-}
