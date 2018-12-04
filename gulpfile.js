@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var fs = require('fs');
@@ -99,3 +100,11 @@ gulp.task('watch', ['html', 'sass', 'browser-sync'], function() {
  * package.jsonに設定をして、`npm run default`で実行できるようにしています。
  */
 gulp.task('default', ['watch']);
+
+/**
+ * 特定のディレクトリだけをGitHub Pagesにデプロイ `gulp deploy`で実行
+ */
+gulp.task('deploy', function() {
+  return gulp.src('./docs/**/*')
+    .pipe(ghPages());
+});

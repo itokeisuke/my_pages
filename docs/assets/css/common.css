@@ -32,6 +32,50 @@ img {
   height: auto; }
 
 /* ------------------------------------------------
+button
+------------------------------------------------ */
+.btn_type1 {
+  -moz-box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5070ab), color-stop(1, #5374b5));
+  background: -moz-linear-gradient(top, #5070ab 5%, #5374b5 100%);
+  background: -webkit-linear-gradient(top, #5070ab 5%, #5374b5 100%);
+  background: -o-linear-gradient(top, #5070ab 5%, #5374b5 100%);
+  background: -ms-linear-gradient(top, #5070ab 5%, #5374b5 100%);
+  background: linear-gradient(to bottom, #5070ab 5%, #5374b5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5070ab', endColorstr='#5374b5',GradientType=0);
+  background-color: #5070ab;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 300px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #ffffff;
+  list-style: 1.1em;
+  text-decoration: none;
+  margin: auto;
+  padding: 10px 10px;
+  cursor: pointer; }
+
+.myButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5374b5), color-stop(1, #5070ab));
+  background: -moz-linear-gradient(top, #5374b5 5%, #5070ab 100%);
+  background: -webkit-linear-gradient(top, #5374b5 5%, #5070ab 100%);
+  background: -o-linear-gradient(top, #5374b5 5%, #5070ab 100%);
+  background: -ms-linear-gradient(top, #5374b5 5%, #5070ab 100%);
+  background: linear-gradient(to bottom, #5374b5 5%, #5070ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5374b5', endColorstr='#5070ab',GradientType=0);
+  background-color: #5374b5; }
+
+.myButton:active {
+  position: relative;
+  top: 1px; }
+
+/* ------------------------------------------------
 index
 ------------------------------------------------ */
 .page_home {
@@ -57,20 +101,22 @@ index
   100% {
     background-position: 0% 50%; } }
 
-.title_wrap {
-  max-width: 600px;
-  margin: 0 auto 40px; }
-  .title_wrap .title {
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-    position: relative; }
-    .title_wrap .title img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      -webkit-animation: bounce 3s ease infinite;
-      animation: bounce 3s ease infinite; }
+.home_header {
+  padding: 40px 10px; }
+  .home_header .title_wrap {
+    max-width: 600px;
+    margin: 0 auto; }
+    .home_header .title_wrap .title {
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      position: relative; }
+      .home_header .title_wrap .title img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-animation: bounce 3s ease infinite;
+        animation: bounce 3s ease infinite; }
 
 @-webkit-keyframes bounce {
   0%, 100% {
@@ -85,33 +131,8 @@ index
   50% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
-
-.btn_wrap {
-  margin: 0 auto 40px; }
-
-.btn_type1 {
-  box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(to bottom, #5070ab 5%, #5374b5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5070ab', endColorstr='#5374b5',GradientType=0);
-  background-color: #5070ab;
-  border-radius: 5px;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 300px;
-  font-size: 23px;
-  font-weight: 700;
-  color: #ffffff;
-  list-style: 1.1em;
-  text-decoration: none;
-  margin: auto;
-  padding: 10px 10px;
-  cursor: pointer; }
-
-.myButton:hover {
-  background: linear-gradient(to bottom, #5374b5 5%, #5070ab 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5374b5', endColorstr='#5070ab',GradientType=0);
-  background-color: #5374b5; }
-
-.myButton:active {
-  position: relative;
-  top: 1px; }
+  .home_header .btn_wrap {
+    margin: 0 auto; }
+    .home_header .btn_wrap a:hover {
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04); }

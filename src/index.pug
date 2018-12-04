@@ -15,13 +15,14 @@ append variables
   - var assetsPath= '/my_pages/assets/';
 
 block content
-  .title_wrap
-    h1.title
-      img(src=assetsPath+'images/octocat.png', alt="My page")
-    p 大きくしたり小さくしたり
-  h2(class="sparkley") キラキラ 目立たせる
-  .btn_wrap
-    a(href='#', class='btn_type1 sparkley') カートに入れろ
+  .home_header
+    .title_wrap
+      h1.title
+        img(src=assetsPath+'images/octocat.png', alt="My page")
+      p 大きくしたり小さくしたり
+    h2(class="sparkley") キラキラ 目立たせる
+    .btn_wrap
+      a(href='#', class='btn_type1 sparkley') カートに入れ
 
 //- append prepend block
 block append css
