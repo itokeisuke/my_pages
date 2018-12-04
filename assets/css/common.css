@@ -51,7 +51,7 @@ button
   border-radius: 5px;
   box-sizing: border-box;
   display: inline-block;
-  width: 300px;
+  width: 280px;
   font-size: 23px;
   font-weight: 700;
   color: #ffffff;
@@ -76,7 +76,10 @@ button
   top: 1px; }
 
 /* ------------------------------------------------
-index
+common vars
+------------------------------------------------ */
+/* ------------------------------------------------
+home
 ------------------------------------------------ */
 .page_home {
   background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
@@ -133,6 +136,8 @@ index
     transform: scale(1); } }
   .home_header .btn_wrap {
     margin: 0 auto; }
-    .home_header .btn_wrap a:hover {
-      -webkit-transform: scale(1.04);
-      transform: scale(1.04); }
+    .home_header .btn_wrap a {
+      transition: all  0.3s ease; }
+      .home_header .btn_wrap a:hover {
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04); }
