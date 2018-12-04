@@ -12,7 +12,7 @@ body {
 article, aside, figure, footer, header, hgroup, nav, section {
   display: block; }
 
-div, p, ul, ol, li, dl, dt, dd, form, input, img {
+h1, h2, h3, h4, h5, h6, div, p, ul, ol, li, dl, dt, dd, form, input, img {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
@@ -51,7 +51,7 @@ button
   border-radius: 5px;
   box-sizing: border-box;
   display: inline-block;
-  width: 300px;
+  width: 280px;
   font-size: 23px;
   font-weight: 700;
   color: #ffffff;
@@ -76,15 +76,11 @@ button
   top: 1px; }
 
 /* ------------------------------------------------
-index
+common vars
 ------------------------------------------------ */
-.page_home {
-  background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
-  background-size: 600% 600%;
-  -webkit-animation: bodyBGgradation 10s ease infinite;
-  animation: bodyBGgradation 10s ease infinite;
-  text-align: center; }
-
+/* ------------------------------------------------
+home
+------------------------------------------------ */
 @-webkit-keyframes bodyBGgradation {
   0% {
     background-position: 0% 50%; }
@@ -101,22 +97,32 @@ index
   100% {
     background-position: 0% 50%; } }
 
-.home_header {
-  padding: 40px 10px; }
-  .home_header .title_wrap {
-    max-width: 600px;
-    margin: 0 auto; }
-    .home_header .title_wrap .title {
-      width: 100%;
-      height: 0;
-      padding-top: 100%;
-      position: relative; }
-      .home_header .title_wrap .title img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-animation: bounce 3s ease infinite;
-        animation: bounce 3s ease infinite; }
+.page_home {
+  background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
+  background-size: 600% 600%;
+  -webkit-animation: bodyBGgradation 10s ease infinite;
+  animation: bodyBGgradation 10s ease infinite;
+  text-align: center;
+  /* header */
+  /* /header */
+  /* about */
+  /* /about */ }
+  .page_home .home_header {
+    padding: 40px 10px; }
+    .page_home .home_header .title_wrap {
+      max-width: 600px;
+      margin: 0 auto; }
+      .page_home .home_header .title_wrap .title {
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        position: relative; }
+        .page_home .home_header .title_wrap .title img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-animation: bounce 3s ease infinite;
+          animation: bounce 3s ease infinite; }
 
 @-webkit-keyframes bounce {
   0%, 100% {
@@ -131,8 +137,43 @@ index
   50% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
-  .home_header .btn_wrap {
-    margin: 0 auto; }
-    .home_header .btn_wrap a:hover {
-      -webkit-transform: scale(1.04);
-      transform: scale(1.04); }
+    .page_home .home_header .sub_title {
+      margin: 40px auto; }
+    .page_home .home_header .btn_wrap {
+      margin: 0 auto; }
+      .page_home .home_header .btn_wrap a {
+        transition: all 0.3s ease-out; }
+        .page_home .home_header .btn_wrap a:hover {
+          -webkit-transform: scale(1.04);
+          transform: scale(1.04); }
+  .page_home .about_warp {
+    position: relative;
+    overflow: hidden;
+    margin: 10% 0;
+    padding: 80px 0; }
+    .page_home .about_warp::before {
+      box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.2);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+      height: 80%;
+      margin: 3% -10% 0;
+      background: #FFFFFF;
+      -webkit-transform-origin: right center;
+      transform-origin: right center;
+      -webkit-transform: rotate(-1.5deg);
+      transform: rotate(-1.5deg);
+      z-index: -1; }
+    .page_home .about_warp .title {
+      text-align: center;
+      margin-bottom: 20px; }
+    .page_home .about_warp .about_inner {
+      box-sizing: boder-box;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      text-align: left;
+      margin: 0 auto;
+      padding: 80px 10px 100px; }
