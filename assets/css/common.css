@@ -133,3 +133,6 @@ index
     transform: scale(1); } }
   .home_header .btn_wrap {
     margin: 0 auto; }
+    .home_header .btn_wrap a:hover {
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04); }
