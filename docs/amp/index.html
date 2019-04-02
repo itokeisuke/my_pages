@@ -1,0 +1,110 @@
+<!doctype html>
+<html amp="amp" lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>AMP Try out</title>
+    <link rel="canonical" href="index.html"/>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+    <script async="async" src="https://cdn.ampproject.org/v0.js"></script>
+    <script async="async" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async="async" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async="async" custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <style amp-custom="amp-custom">
+      body {
+        text-align: center;
+        padding: 50px 0;
+      }
+      
+      .title h3 {
+        display: inline-block;
+      }
+      .title h3:before {
+        background: linear-gradient(45deg, #51abff, #fff34e, #ff4343);
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin: 0 auto 8px;
+      }
+      
+      .box_wrap {
+        max-width: 680px;
+        margin: auto;
+      }
+      
+      .amp-fit-text {
+          white-space: normal;
+      }
+      
+      amp-lightbox {
+        background-color: rgba( 0, 0, 0, 0.7);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AMP 試してみる</h1>
+    <div class="title">
+      <h3>amp-imgタグ</h3>
+    </div>
+    <amp-img src="../assets/images/octocat.png" alt="Altタグ" width="300" height="300"></amp-img>
+    <div class="title">
+      <h3>youtube 埋め込み</h3>
+    </div>
+    <div class="box_wrap">
+      <amp-youtube data-videoid="6aFdEhEZQjE" width="640" height="380" layout="responsive"></amp-youtube>
+    </div>
+    <div class="title">
+      <h3>カルーセル</h3>
+    </div>
+    <div class="carousel_box">
+      <amp-carousel layout="fixed-height" height="380" type="carousel" controls="controls" autoplay="autoplay" loop="loop" delay="3000">
+        <amp-img src="../assets/images/amp/carousel1.jpg" width="640" height="380"></amp-img>
+        <amp-img src="../assets/images/amp/carousel2.jpg" width="640" height="380"></amp-img>
+        <amp-img src="../assets/images/amp/carousel3.jpg" width="640" height="380"></amp-img>
+      </amp-carousel>
+    </div>
+    <div class="title">
+      <h3>lightbox</h3>
+    </div>
+    <div class="lightbox_box">
+      <button on="tap:syncer-1">開く</button>
+      <amp-lightbox id="syncer-1" layout="nodisplay">
+        <blockquote>
+          <p>ライトボックス1</p>
+        </blockquote>
+        <button on="tap:syncer-1.close">閉じる</button>
+      </amp-lightbox>
+      <button on="tap:syncer-2">開く</button>
+      <amp-lightbox id="syncer-2" layout="nodisplay">
+        <blockquote>
+          <p>ライトボックス2</p>
+        </blockquote>
+        <button on="tap:syncer-2.close">閉じる</button>
+      </amp-lightbox>
+      <button on="tap:syncer-3">開く</button>
+      <amp-lightbox id="syncer-3" layout="nodisplay">
+        <blockquote>
+          <p>ライトボックス3</p>
+        </blockquote>
+        <button on="tap:syncer-3.close">閉じる</button>
+      </amp-lightbox>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+html(amp lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title AMP Try out
+    link(rel="canonical", href="index.html")
+    script(type="application/ld+json").
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    style(amp-boilerplate="").
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    noscript
+      style(amp-boilerplate="").
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    script(async, src="https://cdn.ampproject.org/v0.js")
+    script(async, custom-element="amp-youtube", src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js")
+    script(async, custom-element="amp-carousel", src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+    script(async, custom-element="amp-lightbox", src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js")
+    include style.pug
+
+  body
+    h1 AMP 試してみる
+    .title
+      h3 amp-imgタグ
+    amp-img(src="../assets/images/octocat.png", alt="Altタグ", width="300", height="300")
+    .title
+      h3 youtube 埋め込み
+    div.box_wrap
+      amp-youtube(data-videoid="6aFdEhEZQjE", width="640", height="380"	layout="responsive")
+    .title
+      h3 カルーセル
+    .carousel_box
+      amp-carousel( layout="fixed-height", height="380", type="carousel", controls, autoplay, loop, delay="3000")
+        amp-img(src="../assets/images/amp/carousel1.jpg", width="640", height="380")
+        amp-img(src="../assets/images/amp/carousel2.jpg", width="640", height="380")
+        amp-img(src="../assets/images/amp/carousel3.jpg", width="640", height="380")
+    .title
+      h3 lightbox
+    .lightbox_box
+      button(on="tap:syncer-1") 開く
+      amp-lightbox(id="syncer-1", layout="nodisplay")
+        blockquote
+          p ライトボックス1
+        button(on="tap:syncer-1.close") 閉じる
+      button(on="tap:syncer-2") 開く
+      amp-lightbox(id="syncer-2", layout="nodisplay")
+        blockquote
+          p ライトボックス2
+        button(on="tap:syncer-2.close") 閉じる
+      button(on="tap:syncer-3") 開く
+      amp-lightbox(id="syncer-3", layout="nodisplay")
+        blockquote
+          p ライトボックス3
+        button(on="tap:syncer-3.close") 閉じる
